@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
+import { HomeModule } from './home/home.module';
 import { HeaderComponent } from './shared/components/header/header.component';
 
 
@@ -16,7 +17,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AuthModule
+    AuthModule,
+    HomeModule
   ],
   // Register Services
   providers: [],
