@@ -24,6 +24,8 @@ export class HomeComponent implements OnInit {
     this.books.push(efBook);
     let sqlBook = new BookModel(1, "SQL Server", "Packt", 900, "https://www.tutorialspoint.com/sql/images/sql_pdfcover.jpg");
     this.books.push(sqlBook);
+    let testBook = new BookModel(1, "TEst Book", "Packt", 0, "https://www.tutorialspoint.com/sql/images/sql_pdfcover.jpg");
+    this.books.push(testBook);
 
  
   }
