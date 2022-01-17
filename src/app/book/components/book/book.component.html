@@ -1,9 +1,13 @@
 <div class="card" style="width: 18rem;">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/51JdckX4AdL.jpg" class="card-img-top" alt="...">
+    <img [src]="book.img" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">ASP .Net Core 2.0</h5>
-      <p class="card-text">Author: Packt</p>
-      <p class="card-text">Pricec: 500</p>
+      <h5 class="card-title" >{{book.name}}</h5>
+      <p class="card-text">Author: {{book.author}} </p>
+      <p class="card-text">Price: {{book.price}}</p>
       <a href="#" class="btn btn-primary">Buy</a>
     </div>
   </div>
+
+<!--Taking data objects from home-component-->
+<!-- Display data objects-->
+<!--How do we pass data to component-->
