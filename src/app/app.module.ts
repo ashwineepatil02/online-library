@@ -10,12 +10,15 @@ import { SignupComponent } from './auth/components/signup/signup.component';
 import { HomeComponent } from './home/components/home/home.component';
 import { LoginComponent } from './auth/components/login/login.component';
 import { RouterModule } from '@angular/router';
+import { AdminModule } from './admin/admin.module';
+import { ListBookComponent } from './admin/components/list-book/list-book.component';
 
 
 const routes = [
 {path: '', component: HomeComponent},
 {path: 'signin', component: LoginComponent},
-{path: 'register', component: SignupComponent}
+{path: 'register', component: SignupComponent},
+{path: 'admin', component: ListBookComponent}
 ];
 
 @NgModule({
@@ -30,7 +33,8 @@ const routes = [
     AuthModule,
     HomeModule,
     // To configure rounting
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AdminModule
 
   ],
   // Register Services

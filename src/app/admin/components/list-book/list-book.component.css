@@ -1,0 +1,23 @@
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.btn {background-color: #4CAF50; border-radius: 8px;} /* Green */
+.btn1 {background-color: #f44336; border-radius: 8px;  padding: 7px 20px;}
+.btn2 {background-color: #4CAF50; border-radius: 8px;  margin-top: 10px;margin-left: 20px; padding: 7px 20px;} /* Green */

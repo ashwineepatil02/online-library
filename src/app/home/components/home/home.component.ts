@@ -9,7 +9,9 @@ import { BookModel } from 'src/app/book/components/models/book.model';
 export class HomeComponent implements OnInit {
 
   books: BookModel[];
-  constructor() { 
+
+  constructor()
+  { 
     this.books=[];
   }
 
@@ -26,7 +28,6 @@ export class HomeComponent implements OnInit {
     this.books.push(sqlBook);
     let testBook = new BookModel(1, "TEst Book", "Packt", 0, "https://www.tutorialspoint.com/sql/images/sql_pdfcover.jpg");
     this.books.push(testBook);
-
  
   }
 
