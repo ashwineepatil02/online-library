@@ -1,75 +1,21 @@
 <app-header></app-header>
 
-<button class="btn2">Add</button>
-
-<table>
-    <tr>
-      <th>Book Name</th>
-      <th>Author Name</th>
-      <th>Price</th>
-      <th></th>
-      <th></th>
-    </tr>
-    <tr>
-      <td>.Net Core</td>
-      <td>Packt</td>
-      <td>1000</td>
-      <td><button class="btn">Edit</button></td>
-      <td> <button class="btn1">Delete</button></td>
-      
-    </tr>
-    <tr>
-        <td>Angular</td>
-        <td>Packt</td>
-        <td>900</td>
-        <td><button class="btn">Edit</button></td>
-        <td> <button class="btn1">Delete</button></td>
-    </tr>
-    <tr>
-        <td>Entity framework book</td>
-        <td>Packt</td>
-        <td>1500</td>
-        <td><button class="btn">Edit</button></td>
-        <td> <button class="btn1">Delete</button></td>
-    </tr>
-    <tr>
-        <td>SQL Server</td>
-        <td>Packt</td>
-        <td>1900</td>
-        <td><button class="btn">Edit</button></td>
-        <td> <button class="btn1">Delete</button></td>
-    </tr>
-</table>
-
-   <!-- <table>
-      <tr>
-      <th>Book Name</th>
-      <th>Author Name</th>
-      <th>Price</th>
-    </tr>
-    <tr *ng-For="let book of books">
-      <td>{{ book.name }}</td>
-      <td>{{ book.author }}</td>
-      <td>{{ book.price }}</td>
-    </tr>
-  </table> -->
+<button class="btn2" (click)="addBook">Add</button>
+ <table>
+  <tr>
+  <th>Book Name</th>
+  <th>Author Name</th>
+  <th>Price</th>
+  <th></th>
+  <th></th>
+</tr>
+<tr *ngFor = "let book of books">
+  <td>{{ book.name }}</td>
+  <td>{{ book.author }}</td>
+  <td>{{ book.price }}</td>
+  <td><button class="btn" (click)="editBook" >Edit</button></td>
+  <td> <button class="btn1" (click)="deleteBook">Delete</button></td>
+</tr>
+</table>  
 
 
-<!-- <div class="container row">
-    <div class="col-md-3"  *ngFor = "let item of books">
-        <book-card [book] = "item" ></book-card>
-    </div>
-  
-
-</div>  -->
-
-<!-- 
-<div class="card " style="width: 18rem;">
-    <img [src]="book.img" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title" >{{book.name}}</h5>
-      <p class="card-text">Author: {{book.author}} </p>
-      <p *ngIf="book.price" class="card-text">Price: {{book.price}}</p>
-      <a href="#" class="btn btn-primary">Buy</a>
-    </div>
-  </div> -->

@@ -6,12 +6,12 @@ export class BookModel{
         this.name = _name;
         this.author = _author;
         this.price = _price;
-        this.img = _img;
+        this.imageUrl = _img;
     }
 
     id: number;
     name: string;
     author: string;
     price: number;
-    img: string;
+    imageUrl: string;
 }
