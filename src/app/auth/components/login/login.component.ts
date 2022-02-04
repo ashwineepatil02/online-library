@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BookModel } from 'src/app/book/models/book.model';
+import { UserModel } from '../../models/user.model';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -8,13 +10,13 @@ import { AuthService } from '../../services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
-
+  user!: UserModel;
+  
   email: string = "";
   password: string = "";
-  ngOnInit(): void {
-  }
+ 
 
+ 
   handleLoginClick() {
     this.authService.login(this.email, this.password).subscribe(
       (values) => {
@@ -26,4 +28,31 @@ export class LoginComponent implements OnInit {
   updateEmail(event: any) {
     this.email = event.target.value;
   }
+
+  constructor(private authService: AuthService) {
+    this.user;
+ 
+   }
+
+   ngOnInit(): void {
+   
+    
+  }
+
+ IfAdmin(email: string)
+ {
+  this.authService.getUser(this.email).subscribe(
+    (value) => { this.user = value; },
+    (err) => { console.log("err"); },
+    () => { console.log("Observable data transfer completed"); }
+  );
+   console.log(this.user);
+  // if(this.user.IsAdmin)
+  // {
+  //   return true;
+  // }
+  return false;
+ }
+
+
 }

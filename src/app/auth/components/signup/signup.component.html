@@ -10,30 +10,31 @@
             <form action="">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                    <input [(ngModel)]="fname" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="exampleFormControlInput1"  placeholder="first name" >
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                    <input [(ngModel)]="lname" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="exampleFormControlInput2" placeholder="last name">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1">
+                    <input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" type="email" class="form-control" id="exampleFormControlInput3" placeholder="name@example.com">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleFormControlInput1">
+                    <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" class="form-control" id="exampleFormControlInput4" placeholder="******">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Password</label>
+                    <input [(ngModel)]="password1" [ngModelOptions]="{standalone: true}" type="password" class="form-control" id="exampleFormControlInput5" placeholder="******">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Phone</label>
-                    <input type="tel" class="form-control" id="exampleFormControlInput1">
+                    <input type="tel" class="form-control" id="exampleFormControlInput6">
                 </div>
-                <button type="button" class="btn btn-success float-end">Sign Up</button>
+                <button type="button" class="btn btn-success float-end" (click)="handleSignup" (click)="displayUser">Sign Up</button>
             </form>
+            
         </div>
     </div>
     
