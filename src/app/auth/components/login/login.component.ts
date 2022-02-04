@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
 
  
   handleLoginClick() {
+    console.log(this.email);
     this.authService.login(this.email, this.password).subscribe(
       (values) => {
         console.log(values)
